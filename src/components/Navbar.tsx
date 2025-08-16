@@ -33,7 +33,7 @@ const Navbar = () => {
             )
         }
         {isOpen && (
-            <div className="w-full h-screen relative transition-all duration-300">
+            <div className="w-full h-screen relative transition-all duration-300 flex max-md:justify-center">
                 <div className="fixed inset-0 w-full h-full">
                     <img src={assets.navbg} className="w-full h-full object-cover z-10" alt="" />
                 </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <IoMdClose onClick={handleMenu} className="text-white" size={40} />
                 </div>
                 <div className="relative z-40">
-                    <ul className="text-7xl text-white max-w-[300px] flex flex-col gap-6 ml-[300px] py-[150px]">
+                    <ul className="text-3xl md:text-7xl text-white max-w-[300px] flex flex-col  gap-6 md:ml-[250px] py-[150px]">
                         <li>Home</li>
                         <li>Menu</li>
                         <li>Blog</li>
@@ -50,7 +50,7 @@ const Navbar = () => {
                         <li>Contact</li>
                     </ul>
                 </div>
-                <div className="absolute z-40 bottom-[200px] right-[150px] w-[250px] text-white">
+                <div className="md:block hidden absolute z-40 bottom-[200px] right-[100px] w-[250px] text-white">
                     <div className="py-3 border-b-1 border-dotted">
                         <h3 className="text-2xl font-semibold">Contact</h3>
                     </div>
