@@ -6,6 +6,7 @@ import spices2 from './spices2.png'
 import spices3 from './spices3.png'
 import heroimg2 from './Image (3).jpg'
 import heroimg3 from './Image (4).jpg'
+import branch from './Image.png'
 
 
 
@@ -17,7 +18,8 @@ const assets = {
   spices2,
   spices3,
   heroimg2,
-  heroimg3
+  heroimg3,
+  branch
 }
 
 export default assets
