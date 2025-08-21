@@ -1,6 +1,6 @@
+import type {menuItem}  from "../pages/Home"
 
-
-const HomeMenus = ({price, title, description}) => {
+const HomeMenus = ({price, title, description}: menuItem) => {
   return (
     <div className="text-black">
       <p className="text-2xl md:text-4xl font-rufina flex justify-end mx-auto">${price}</p>
