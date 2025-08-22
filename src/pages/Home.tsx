@@ -112,14 +112,15 @@ const Home = () => {
         </div>
       </div>
       {/*fourth section*/}
-      <div className="border-2 flex flex-col h-[710px] md:flex-row py-[100px] pt-[50px] bg-[#EBF0E4] gap-5 relative">
+      <div className="flex flex-col h-auto lg:h-[710px] md:flex-row py-[100px] pt-[50px] px-[50px] bg-[#EBF0E4] gap-5 relative">
           <div className="flex-1">
-            <div className="border-2 w-[710px] h-full absolute bottom-0 left-0">
-               <img src={assets.chef} className="border-2 w-full h-auto object-center" alt="" />
+            <img src={assets.chef} className="lg:hidden block object-cover w-full h-auto" alt="" />
+            <div className="lg:block hidden w-[710px] h-full absolute bottom-[-29px] left-0">
+               <img src={assets.chef} className="w-full h-auto object-center" alt="" />
             </div>
           </div>
-          <div className="flex-1 items-center mx-auto mt-[200px] ml-[100px] ">
-            <h1 className="text-3xl md:text-7xl font-rufina lg:max-w-[200px] leading-relaxed">Excellent Cook</h1>
+          <div className="flex-1 items-center mx-auto mt-[25px] lg:ml-[100px] ">
+            <h1 className="text-3xl md:text-7xl font-rufina lg:max-w-[200px] leading-25">Excellent Cook</h1>
             <p className="font-lato">Our chef is highly skilled in preparing delicious and healthy meals, combining years of culinary expertise with a passion for creating dishes that are both nutritious and flavorful. With a deep understanding of ingredients and techniques, our chef ensures that every meal is crafted to perfection, offering a delightful dining experience that promotes a healthy lifestyle.</p>
           </div>
       </div>
