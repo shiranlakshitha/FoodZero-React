@@ -8,7 +8,8 @@ import heroimg2 from './Image (3).jpg'
 import heroimg3 from './Image (4).jpg'
 import branch from './Image.png'
 import chef from './chef.png'
-
+import blog1 from './Feature Image.jpg'
+import blog2 from './Feature Image (1).jpg'
 
 
 const assets = {
@@ -21,7 +22,9 @@ const assets = {
   heroimg2,
   heroimg3,
   branch,
-  chef
+  chef,
+  blog1,
+  blog2
 }
 
 export default assets
