@@ -165,7 +165,7 @@ const Home = () => {
         </div>
       </div>
       {/*fifth section*/}
-      <div className="px-[50px] md:mt-[50px] mt-[25px] grid-cols-1 md:grid-cols-3 gap-3 grid">
+      <div className="px-[50px] py-[50px] md:py-[75px] grid-cols-1 md:grid-cols-3 gap-3 grid">
         {
           qualities.map((item, index) => (
             <div key={index} className="flex flex-col text-center justify-start  items-center">
@@ -181,7 +181,7 @@ const Home = () => {
         }
       </div>
       {/*sixth section*/}
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 px-[50px] justify-items-center gap-5">
         {
           blogs.map((item, index) => (
             <BlogCard
