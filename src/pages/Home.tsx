@@ -5,6 +5,7 @@ import { FaCarrot } from "react-icons/fa6";
 import { GiKiwiFruit } from "react-icons/gi";
 import BlogCard from "../components/BlogCard";
 import { blogs } from "../assets/details";
+import Reservations from "../components/Reservations";
 
 export interface menuItem {
   price: number;
@@ -198,6 +199,8 @@ const Home = () => {
           ))
         }
       </div>
+      {/*seventh section*/}
+      <Reservations />
     </div>
   );
 };
