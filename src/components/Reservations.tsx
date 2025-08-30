@@ -34,8 +34,8 @@ const Reservations = () => {
                 </select>
             </div>
         </div>
-        <div className="bg-black px-[35px] py-2">
-            <button className="text-white font-rufina text-2xl cursor-pointer">Book Now</button>
+        <div className="bg-black hover:bg-transparent hover:border-1 hover:border-black px-[35px] py-2">
+            <button className="text-white hover:text-black font-rufina text-2xl  cursor-pointer">Book Now</button>
         </div>
     </div>
   )

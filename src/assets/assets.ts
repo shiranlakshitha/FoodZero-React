@@ -10,6 +10,9 @@ import branch from './Image.png'
 import chef from './chef.png'
 import blog1 from './Feature Image.jpg'
 import blog2 from './Feature Image (1).jpg'
+import starters from './starters.jpg'
+import mains from './mains.png'
+import soups from './soups.png'
 
 
 const assets = {
@@ -24,7 +27,10 @@ const assets = {
   branch,
   chef,
   blog1,
-  blog2
+  blog2,
+  starters,
+  mains,
+  soups
 }
 
 export default assets

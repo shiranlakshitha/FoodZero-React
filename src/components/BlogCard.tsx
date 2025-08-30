@@ -2,7 +2,7 @@ import type { Blog } from "../assets/details"
 import { FaArrowRight } from "react-icons/fa";
 const BlogCard = ({title, description, img, userImg, userName, date, time, comments}: Blog) => {
   return (
-    <div className="flex flex-col max-w-[500px]">
+    <div className="flex flex-col max-w-[500px] relative">
         <div className="max-w-[500px] w-full">
             <img src={img} className="w-full h-auto object-cover" alt={title} />
         </div>
@@ -20,6 +20,9 @@ const BlogCard = ({title, description, img, userImg, userName, date, time, comme
                 <button>Read More</button>
                 <FaArrowRight />
             </div>
+        </div>
+        <div className="absolute bg-[#5E6600] px-7 py-2.5 top-5 right-5">
+            <p className="text-white font-semibold font-lato">Foods</p>
         </div>
     </div>
   )

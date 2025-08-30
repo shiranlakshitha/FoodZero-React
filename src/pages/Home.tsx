@@ -6,11 +6,17 @@ import { GiKiwiFruit } from "react-icons/gi";
 import BlogCard from "../components/BlogCard";
 import { blogs } from "../assets/details";
 import Reservations from "../components/Reservations";
+import TypesCard from "../components/TypesCard";
 
 export interface menuItem {
   price: number;
   title: string;
   description: string;
+}
+
+export interface foodType {
+  img: string;
+  type: string;
 }
 
 const Home = () => {
@@ -53,6 +59,21 @@ const Home = () => {
     title: "Vibrant Flavors",
     description: "Experience vibrant flavors with our carefully crafted dishes."
   }]
+
+  const foodTypes : foodType[] = [
+    {
+      img:assets.starters,
+      type: "Starters"
+    },
+    {
+      img:assets.mains,
+      type: "Mains",
+    },
+    {
+      img:assets.soups,
+      type: "Soups"
+    }
+  ]
   return (
     <div className="">
       <div className="bg-[#233000] h-[1800px] px-[50px]">
@@ -182,7 +203,7 @@ const Home = () => {
         }
       </div>
       {/*sixth section*/}
-      <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 px-[50px] justify-items-center gap-5">
+      <div className="py-[50px] grid grid-cols-1 md:grid-cols-2 px-[50px] justify-items-center gap-5">
         {
           blogs.map((item, index) => (
             <BlogCard
@@ -201,6 +222,22 @@ const Home = () => {
       </div>
       {/*seventh section*/}
       <Reservations />
+      {/*eightth section*/}
+      <div className="text-center px-[50px] py-[50px]">
+        <h1 className="text-5xl font-semibold  font-rufina text-black">
+          Calories Energy Balance
+        </h1>
+        <p className="mt-[35px] font-lato max-w-[600px] mx-auto">
+          Maintaining a healthy weight requires balancing the calories you consume with the calories you burn. Our menu is designed to help you achieve that balance with delicious, nutritious options.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-[50px] justify-items-center">
+          {
+            foodTypes.map((item, index) => (
+              <TypesCard key={index} img={item.img} type={item.type} />
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 };
