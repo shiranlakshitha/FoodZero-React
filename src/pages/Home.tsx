@@ -247,11 +247,9 @@ const Home = () => {
         </div>
       </div>
       {/*ninth section*/}
-      <div>
+      <div className="px-[50px] py-[100px]">
         <RatingsCard />
       </div>
-      {/*tenth section*/}
-      
     </div>
   );
 };
