@@ -7,6 +7,7 @@ import BlogCard from "../components/BlogCard";
 import { blogs } from "../assets/details";
 import Reservations from "../components/Reservations";
 import TypesCard from "../components/TypesCard";
+import RatingsCard from "../components/RatingsCard";
 
 export interface menuItem {
   price: number;
@@ -46,34 +47,40 @@ const Home = () => {
     },
   ];
 
-  const qualities = [{
-    icon: <FaFishFins className="text-black text-3xl"/>,
-    title: "Fresh Ingredients",
-    description: "We use only the freshest ingredients in our meals."
-  },{
-    icon: <FaCarrot  className="text-black text-3xl"/>,
-    title: "Nutritious Options",
-    description: "Our menu features a variety of nutritious options to choose from."
-  },{
-    icon: <GiKiwiFruit className="text-black text-3xl"/>,
-    title: "Vibrant Flavors",
-    description: "Experience vibrant flavors with our carefully crafted dishes."
-  }]
-
-  const foodTypes : foodType[] = [
+  const qualities = [
     {
-      img:assets.starters,
-      type: "Starters"
+      icon: <FaFishFins className="text-black text-3xl" />,
+      title: "Fresh Ingredients",
+      description: "We use only the freshest ingredients in our meals.",
     },
     {
-      img:assets.mains,
+      icon: <FaCarrot className="text-black text-3xl" />,
+      title: "Nutritious Options",
+      description:
+        "Our menu features a variety of nutritious options to choose from.",
+    },
+    {
+      icon: <GiKiwiFruit className="text-black text-3xl" />,
+      title: "Vibrant Flavors",
+      description:
+        "Experience vibrant flavors with our carefully crafted dishes.",
+    },
+  ];
+
+  const foodTypes: foodType[] = [
+    {
+      img: assets.starters,
+      type: "Starters",
+    },
+    {
+      img: assets.mains,
       type: "Mains",
     },
     {
-      img:assets.soups,
-      type: "Soups"
-    }
-  ]
+      img: assets.soups,
+      type: "Soups",
+    },
+  ];
   return (
     <div className="">
       <div className="bg-[#233000] h-[1800px] px-[50px]">
@@ -188,37 +195,38 @@ const Home = () => {
       </div>
       {/*fifth section*/}
       <div className="px-[50px] py-[50px] md:py-[75px] grid-cols-1 md:grid-cols-3 gap-3 grid">
-        {
-          qualities.map((item, index) => (
-            <div key={index} className="flex flex-col text-center justify-start  items-center">
-          <div className="rounded-full bg-[#EBF0E4] w-[150px] h-[150px] flex flex-col items-center justify-center">
-            {item.icon}
+        {qualities.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col text-center justify-start  items-center"
+          >
+            <div className="rounded-full bg-[#EBF0E4] w-[150px] h-[150px] flex flex-col items-center justify-center">
+              {item.icon}
+            </div>
+            <div className="text-black mt-[25px]">
+              <h2 className="text-2xl font-semibold font-rufina">
+                {item.title}
+              </h2>
+              <p className="font-lato">{item.description}</p>
+            </div>
           </div>
-          <div className="text-black mt-[25px]">
-            <h2 className="text-2xl font-semibold font-rufina">{item.title}</h2>
-            <p className="font-lato">{item.description}</p>
-          </div>
-        </div>
-          ))
-        }
+        ))}
       </div>
       {/*sixth section*/}
       <div className="py-[50px] grid grid-cols-1 md:grid-cols-2 px-[50px] justify-items-center gap-5">
-        {
-          blogs.map((item, index) => (
-            <BlogCard
-              key={index}
-              title={item.title}
-              description={item.description}
-              img={item.img}
-              userImg={item.userImg}
-              userName={item.userName}
-              date={item.date}
-              time={item.time}
-              comments={item.comments}
-            />
-          ))
-        }
+        {blogs.map((item, index) => (
+          <BlogCard
+            key={index}
+            title={item.title}
+            description={item.description}
+            img={item.img}
+            userImg={item.userImg}
+            userName={item.userName}
+            date={item.date}
+            time={item.time}
+            comments={item.comments}
+          />
+        ))}
       </div>
       {/*seventh section*/}
       <Reservations />
@@ -228,16 +236,59 @@ const Home = () => {
           Calories Energy Balance
         </h1>
         <p className="mt-[35px] font-lato max-w-[600px] mx-auto">
-          Maintaining a healthy weight requires balancing the calories you consume with the calories you burn. Our menu is designed to help you achieve that balance with delicious, nutritious options.
+          Maintaining a healthy weight requires balancing the calories you
+          consume with the calories you burn. Our menu is designed to help you
+          achieve that balance with delicious, nutritious options.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-[50px] justify-items-center">
-          {
-            foodTypes.map((item, index) => (
-              <TypesCard key={index} img={item.img} type={item.type} />
-            ))
-          }
+          {foodTypes.map((item, index) => (
+            <TypesCard key={index} img={item.img} type={item.type} />
+          ))}
         </div>
       </div>
+      {/*ninth section*/}
+      <div>
+        <RatingsCard />
+      </div>
+      {/*tenth section*/}
+      <div className="carousel w-full">
+  <div id="slide1" className="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+      className="w-full" />
+    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide4" className="btn btn-circle">❮</a>
+      <a href="#slide2" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide2" className="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+      className="w-full" />
+    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide1" className="btn btn-circle">❮</a>
+      <a href="#slide3" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide3" className="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+      className="w-full" />
+    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" className="btn btn-circle">❮</a>
+      <a href="#slide4" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide4" className="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+      className="w-full" />
+    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide3" className="btn btn-circle">❮</a>
+      <a href="#slide1" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>
     </div>
   );
 };
