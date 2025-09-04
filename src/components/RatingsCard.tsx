@@ -35,9 +35,12 @@ const RatingsCard = () => {
   const current = ratings[index]
 
   useEffect(() => {
-    if(index < 0) setIndex(1)
-
-    else if(index >= ratings.length) setIndex(ratings.length - 1)
+    if(index < 0) {
+      setIndex(0)
+    }
+    else if(index >= ratings.length) {
+      setIndex(ratings.length - 1)
+    }
 
   }, [index, ratings.length])
   return (
@@ -58,9 +61,13 @@ const RatingsCard = () => {
             </div>
           </div>
           <div className="flex flex-row gap-6 items-center">
-            <LuArrowLeft onClick={() => setIndex(index - 1)} />
+            <LuArrowLeft onClick={() => {setIndex(index - 1)
+              console.log(index)}
+            } />
             {index + 1} / {ratings.length}
-            <LuArrowRight onClick={() => setIndex(index + 1)} />
+            <LuArrowRight onClick={() => {setIndex(index + 1)
+              console.log(index)}
+            } />
           </div>
         </div>
       </div>

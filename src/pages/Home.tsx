@@ -8,6 +8,7 @@ import { blogs } from "../assets/details";
 import Reservations from "../components/Reservations";
 import TypesCard from "../components/TypesCard";
 import RatingsCard from "../components/RatingsCard";
+import Footer from "../components/Footer";
 
 export interface menuItem {
   price: number;
@@ -250,6 +251,8 @@ const Home = () => {
       <div className="px-[50px] py-[100px]">
         <RatingsCard />
       </div>
+      {/*tenth section*/}
+      <Footer />
     </div>
   );
 };
