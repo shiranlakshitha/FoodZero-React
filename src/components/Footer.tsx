@@ -30,7 +30,7 @@ const Footer = () => {
                 <p className="mt-[15px]font-semibold font-lato">Stay updated with our latest news and offers</p>
             </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="mt-[15px] flex justify-between items-center">
             <div>
                <p> © 2025 Zero Inc. All rights Reserved</p>
             </div>

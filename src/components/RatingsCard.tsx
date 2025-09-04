@@ -44,7 +44,7 @@ const RatingsCard = () => {
 
   }, [index, ratings.length])
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 transition-all ease-in duration-150">
         <div>
           <h2 className="font-rufina text-2xl">
             "{current.comment}"
