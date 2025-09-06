@@ -1,8 +1,15 @@
+import Navbar from "../components/Navbar"
 
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <>
+      <Navbar />
+      {/*first section*/}
+      <div>
+        
+      </div>
+    </>
   )
 }
 

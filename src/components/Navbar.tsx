@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <>
       {!isOpen && (
-        <nav className="bg-[#233000] p-5 flex w-full justify-between items-center">
+        <nav className={`${location.pathname === '/' ? 'bg-[#233000]' : ''} p-5 flex w-full justify-between items-center`}>
           <div className="flex flex-row max-w-[350px] gap-[50px] items-center justify-between">
             <img src={assets.logo} width={200} alt="" />
             <CiMenuBurger

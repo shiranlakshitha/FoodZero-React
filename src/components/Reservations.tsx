@@ -7,7 +7,7 @@ const Reservations = () => {
             <h1 className="text-6xl font-semibold font-rufina">Make a Reservation</h1>
             <p className="mt-[10px] font-lato">Get in touch with restaurant</p>
         </div>
-        <div className="flex flex-row gap-[30px] py-[50px] min-w-[800px]">
+        <div className="flex flex-col md:flex-row gap-[30px] py-[50px] w-full md:min-w-[800px]">
             <div className="border-1 rounded-sm w-full">
                 <input type="date" className="p-3" name="" id="" />
             </div>

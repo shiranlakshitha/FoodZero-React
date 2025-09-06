@@ -6,12 +6,12 @@ import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="px-[50px] bg-[#233000] py-[75px] text-white">
-        <div className="grid grid-cols-4 gap-5 border-b-1 border-dotted pb-[50px] border-white">
-            <div>
+        <div className="flex flex-col md:grid  md:grid-cols-4 gap-5 border-b-1 border-dotted pb-[50px] border-white">
+            <div className="">
                 <h1 className="text-4xl font-bold font-rufina">Food Zero</h1>
             </div>
             <div className="flex flex-col gap-4">
-                <h1 className="text-2xl font-rufina">Contact</h1>
+                <h1 className="text-3xl font-rufina font-bold">Contact</h1>
                 <div className="flex flex-col gap-1 font-lato">
                     <p>+1+86 852 346 000</p>
                     <p>info@foodzero.com</p>
@@ -22,12 +22,12 @@ const Footer = () => {
                 </div>
             </div>
             <div className="col-span-2">
-                <h1 className="text-2xl font-rufina">Never miss a recipe</h1>
-                <div className="mt-[25px] flex flex-row gap-5 font-lato">
-                    <input type="text" placeholder="Your Email" className="w-[350px] focus:outline-none px-4 py-5 border-1 border-white" />
-                    <button className="px-[50px] py-2 bg-[#5E6600] hover:bg-[#9CAA00] transition-all duration-150 cursor-pointer">Subscribe</button>
+                <h1 className="text-3xl font-rufina font-bold">Never miss a recipe</h1>
+                <div className="mt-[25px] flex flex-col md:flex-row gap-5 font-lato">
+                    <input type="text" placeholder="Your Email" className="md:w-[350px] focus:outline-none px-4 py-5 border-1 border-white" />
+                    <button className="px-[15px] md:px-[50px] py-2 bg-[#5E6600] hover:bg-[#9CAA00] transition-all duration-150 cursor-pointer">Subscribe</button>
                 </div>
-                <p className="mt-[15px]font-semibold font-lato">Stay updated with our latest news and offers</p>
+                <p className="mt-[15px] font-semibold font-lato">Stay updated with our latest news and offers</p>
             </div>
         </div>
         <div className="mt-[15px] flex justify-between items-center">

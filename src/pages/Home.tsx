@@ -9,6 +9,7 @@ import Reservations from "../components/Reservations";
 import TypesCard from "../components/TypesCard";
 import RatingsCard from "../components/RatingsCard";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 export interface menuItem {
   price: number;
@@ -83,6 +84,8 @@ const Home = () => {
     },
   ];
   return (
+    <>
+    <Navbar />
     <div className="">
       <div className="bg-[#233000] h-[1800px] px-[50px]">
         <div className="pt-[50px] relative w-full h-auto lg:h-[750px]">
@@ -254,6 +257,7 @@ const Home = () => {
       {/*tenth section*/}
       <Footer />
     </div>
+    </>
   );
 };
 
