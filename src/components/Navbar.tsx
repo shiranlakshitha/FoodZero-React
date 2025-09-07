@@ -24,9 +24,9 @@ const Navbar = () => {
   return (
     <>
       {!isOpen && (
-        <nav className={`${location.pathname === '/' ? 'bg-[#233000]' : ''} py-5 px-[100px] flex w-full justify-between items-center`}>
-          <div className="flex flex-row max-w-[350px] gap-[50px] items-center justify-between">
-            <img src={assets.logo} width={200} alt="" />
+        <nav className={`${location.pathname === '/' ? 'bg-[#233000]' : ''} py-5 px-[25px] md:px-[100px] flex w-full justify-between items-center`}>
+          <div className="flex flex-row w-full md:max-w-[350px] gap-[50px] items-center justify-between">
+            <img src={assets.logo} className="md:w-[250px] w-[150px] h-auto object-cover" alt="" />
             <CiMenuBurger
               onClick={handleMenu}
               className="text-white"
@@ -34,8 +34,8 @@ const Navbar = () => {
             />
           </div>
           <div className="flex justify-between items-center gap-10">
-            <p className="text-white">+94-5587123</p>
-            <div className="text-[12px] text-white border-1 rouned-2xl px-4 py-2">
+            <p className="md:block hidden text-white">+94-5587123</p>
+            <div className="text-[12px] md:block hidden text-white border-1 rouned-2xl px-4 py-2">
               Reservations
             </div>
           </div>

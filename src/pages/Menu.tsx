@@ -82,8 +82,8 @@ const Menu = () => {
           <img className="w-full h-full object-cover" src={assets.menucover} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="px-[100px]  relative flex flex-col h-full items-start justify-center z-50">
-          <h1 className="text-8xl max-w-[400px] text-white font-rufina">View our new menu</h1>
+        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-50">
+          <h1 className="md:text-8xl text-7xl w-full md:max-w-[400px] text-white font-rufina">View our new menu</h1>
           <p className="mt-[15px] text-2xl text-white font-lato">The freshest ingredients for you every day</p>
         </div>
       </div>
@@ -93,7 +93,7 @@ const Menu = () => {
           <h1 className="font-rufina text-7xl font-bold">Starters</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
         </div>
-        <div className="mt-[50px] flex flex-row items-center justify-between gap-[50px]">
+        <div className="mt-[50px] flex flex-col md:flex-row  items-center justify-between gap-[50px]">
           <div className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu1} alt="" />
           </div>
@@ -116,7 +116,7 @@ const Menu = () => {
           <h1 className="font-rufina text-7xl font-bold">Mains</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
         </div>
-        <div className="mt-[50px] flex flex-row-reverse items-center justify-between gap-[50px]">
+        <div className="mt-[50px] flex flex-col md:flex-row-reverse items-center justify-between gap-[50px]">
           <div className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu2} alt="" />
           </div>
@@ -139,7 +139,7 @@ const Menu = () => {
           <h1 className="font-rufina text-7xl font-bold">Pastries & Drinks</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
         </div>
-        <div className="mt-[50px] flex flex-row items-center justify-between gap-[50px]">
+        <div className="mt-[50px] flex flex-col md:flex-row items-center justify-between gap-[50px]">
           <div className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu2} alt="" />
           </div>
