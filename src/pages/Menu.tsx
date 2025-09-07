@@ -1,5 +1,7 @@
 import assets from "../assets/assets"
+import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
+import Reservations from "../components/Reservations"
 
 interface menus {
   id: number,
@@ -85,13 +87,13 @@ const Menu = () => {
           <p className="mt-[15px] text-2xl text-white font-lato">The freshest ingredients for you every day</p>
         </div>
       </div>
-      {/*first section*/}
+      {/*second section*/}
       <div className="px-[50px] py-[100px]">
         <div className="text-center">
           <h1 className="font-rufina text-7xl font-bold">Starters</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
         </div>
-        <div className="mt-[50px] flex items-center justify-between gap-[50px]">
+        <div className="mt-[50px] flex flex-row items-center justify-between gap-[50px]">
           <div className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu1} alt="" />
           </div>
@@ -108,6 +110,54 @@ const Menu = () => {
           </div>
         </div>
       </div>
+      {/*third section*/}
+      <div className="px-[50px] py-[100px]">
+        <div className="text-center">
+          <h1 className="font-rufina text-7xl font-bold">Mains</h1>
+          <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
+        </div>
+        <div className="mt-[50px] flex flex-row-reverse items-center justify-between gap-[50px]">
+          <div className="max-w-[500px] flex-1">
+            <img className="flex w-full h-full object-cover" src={assets.menu2} alt="" />
+          </div>
+          <div className="flex-col flex-1 max-w-[600px]">
+            {menus[1].data.map((item) => (
+              <div key={item.id}>
+                <p className="font-rufina text-3xl flex justify-end border-b-1 border-dotted">{item.price}</p>
+                <h1 className="max-w-[400px] font-rufina text-5xl mt-[15px]">{item.name}</h1>
+                <p className="mt-[25px]">{item.description}</p>
+              </div>
+            ))}
+            
+
+          </div>
+        </div>
+      </div>
+      {/*fourth section*/}
+      <div className="px-[50px] py-[100px]">
+        <div className="text-center">
+          <h1 className="font-rufina text-7xl font-bold">Pastries & Drinks</h1>
+          <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
+        </div>
+        <div className="mt-[50px] flex flex-row items-center justify-between gap-[50px]">
+          <div className="max-w-[500px] flex-1">
+            <img className="flex w-full h-full object-cover" src={assets.menu2} alt="" />
+          </div>
+          <div className="flex-col flex-1 max-w-[600px]">
+            {menus[1].data.map((item) => (
+              <div key={item.id}>
+                <p className="font-rufina text-3xl flex justify-end border-b-1 border-dotted">{item.price}</p>
+                <h1 className="max-w-[400px] font-rufina text-5xl mt-[15px]">{item.name}</h1>
+                <p className="mt-[25px]">{item.description}</p>
+              </div>
+            ))}
+            
+
+          </div>
+        </div>
+      </div>
+      <Reservations />
+      <Footer />
     </>
   )
 }
