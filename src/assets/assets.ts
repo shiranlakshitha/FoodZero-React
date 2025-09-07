@@ -14,6 +14,7 @@ import starters from './starters.jpg'
 import mains from './mains.png'
 import soups from './soups.png'
 import menucover from './menu-cover.jpg'
+import menu1 from './menu1.jpg'
 
 const assets = {
   logo,
@@ -31,7 +32,8 @@ const assets = {
   starters,
   mains,
   soups,
-  menucover
+  menucover,
+  menu1
 }
 
 export default assets
