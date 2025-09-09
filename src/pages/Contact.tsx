@@ -57,7 +57,7 @@ const Contact = () => {
         </div>
       </div>
       {/*second section*/}
-      <div className="px-[50px] py-[200px]">
+      <div className="px-[50px] flex flex-col gap-7 py-[200px]">
         <div className="flex-1 flex flex-row max-md:flex-wrap gap-10 justify-between">
           <div className="max-w-[700px]">
             <img className="w-full h-auto object-cover" src={assets.mangoglasses} alt="" />
@@ -70,7 +70,20 @@ const Contact = () => {
           </p>
           </div>
         </div>
+        <div className="pt-[150px] flex-1 flex flex-row-reverse max-md:flex-wrap gap-10 justify-between">
+          <div className="max-w-[700px]">
+            <img className="w-full h-auto object-cover" src={assets.nicehouse} alt="" />
+          </div>
+          <div className="flex justify-start w-full mx-auto md:items-end mb-[50px]">
+            <p className="text-2xl font-lato">
+            We can be contacted via <br />
+            email <span className="text-[#9CAA00] font-bold">info@foodzero.com</span> <br />
+            or telephone on <span className="text-[#9CAA00] font-bold">+86 852 346 000</span>
+          </p>
+          </div>
+        </div>
       </div>
+     
     </>
   )
 }
