@@ -1,4 +1,5 @@
 import assets from "../assets/assets"
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar"
 
 export interface openings {
@@ -74,16 +75,56 @@ const Contact = () => {
           <div className="max-w-[700px]">
             <img className="w-full h-auto object-cover" src={assets.nicehouse} alt="" />
           </div>
-          <div className="flex justify-start w-full mx-auto md:items-end mb-[50px]">
-            <p className="text-2xl font-lato">
-            We can be contacted via <br />
-            email <span className="text-[#9CAA00] font-bold">info@foodzero.com</span> <br />
-            or telephone on <span className="text-[#9CAA00] font-bold">+86 852 346 000</span>
-          </p>
+          <div className="flex flex-col justify-center mb-[50px]">
+            <p className="font-rufina text-2xl">We are located in 1959 Sepulveda Blvd. Culver City, CA, 90230</p>
+            <button className="mt-[50px] max-w-[200px] flex self-center mx-auto bg-none border-1 px-3 py-3">View in maps</button>
           </div>
         </div>
       </div>
+      {/*fourth section*/}
+      <div className="px-[50px] flex flex-col py-[100px] gap-5 bg-[#EBF0E4]">
+        <div className="text-center">
+          <h1 className="font-rufina text-7xl">Make a Reservation</h1>
+          <p className="font-lato text-xl">Get in touch with restaurant</p>
+        </div>
+        <div className="flex flex-col gap-[30px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] ">
+            <div className="w-full px-[20px] py-[15px] border-1 focus:outline-none"><input className="w-full" type="text" placeholder="First Name" /></div>
+            <div className="w-full px-[20px] py-[15px] border-1 focus:outline-none"><input className="w-full" type="text" placeholder="Last Name" /></div>
+          </div>
+          <div>
+            <div className="w-full px-[20px] py-[15px] border-1 focus:outline-none"><input className="w-full" type="text" placeholder="Email" /></div>
+          </div>
+          <div>
+            <div className="w-full px-[20px] py-[15px] border-1 focus:outline-none"><input className="w-full" type="text" placeholder="Phone" /></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] ">
+            <div className="w-full px-[20px] py-[15px] border-1 focus:outline-none"><input className="w-full" type="date" placeholder="Date" /></div>
+            <div className="w-full px-[20px] py-[15px] border-1 focus:outline-none"><input className="w-full" type="time" placeholder="Time" /></div>
+          </div>
+          <div>
+            <div>
+              <select name="Person" id="person" className="border rounded p-3 w-full">
+                    <option value="">Choose no of persons</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6+</option>
+                </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button></button>
+        </div>
+      </div>         
+      {/*fifth section*/}
+      <Footer />
      
+
+                
     </>
   )
 }
