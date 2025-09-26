@@ -19,6 +19,7 @@ import menu2 from './menu2.jpg'
 import contactcover from './contact-cover.jpg'
 import mangoglasses from './mango-glasses.jpg'
 import nicehouse from './nicehouse.jpg'
+import portfolio from './portfolio.png'
 
 const assets = {
   logo,
@@ -41,7 +42,8 @@ const assets = {
   menu2,
   contactcover,
   mangoglasses,
-  nicehouse
+  nicehouse,
+  portfolio
 
 }
 

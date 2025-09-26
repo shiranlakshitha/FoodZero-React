@@ -2,7 +2,13 @@
 import assets from '../assets/assets'
 import Navbar from '../components/Navbar'
 
+
+const types: string[] = ['All', 'starters', 'lunch', 'dinner', 'drinks', 'sweets', 'fruits']
+
 const Portfolio = () => {
+
+
+
   return (
     <>
        <div className="relative w-full  h-screen">
@@ -10,13 +16,27 @@ const Portfolio = () => {
           <Navbar />
         </div>
         <div className="absolute inset-0 z-10">
-          <img className="w-full h-full object-cover" src={assets.menucover} alt="" />
+          <img className="w-full h-full object-cover" src={assets.portfolio} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
         <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-50">
-          <h1 className="md:text-8xl text-7xl w-full md:max-w-[400px] text-white font-rufina">View our new menu</h1>
-          <p className="mt-[15px] text-2xl text-white font-lato">The freshest ingredients for you every day</p>
+          <h1 className="md:text-8xl text-7xl w-full text-center text-white font-rufina">Portfolio</h1>
         </div>
+      </div>
+      {/*second section*/}
+      <div className='px-[50px] py-[100px]'>
+          <div className='flex flex-row gap-10 justify-center items-center mx-auto'>
+            {
+              types.map((item, index) => (
+                <p className='font-lato' key={index}>{item}</p>
+              ))
+            }
+          </div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
       </div> 
     </>
   )
