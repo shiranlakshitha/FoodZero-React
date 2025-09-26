@@ -83,8 +83,8 @@ const Contact = () => {
       </div>
       {/*fourth section*/}
       <div className="px-[50px] flex flex-col py-[100px] gap-5 bg-[#EBF0E4]">
-        <div className="text-center">
-          <h1 className="font-rufina text-7xl">Make a Reservation</h1>
+        <div className="text-center flex justify-center items-center flex-col w-full mx-auto">
+          <h1 className="font-rufina font-bold text-4xl sm:text-5xl md:text-7xl">Make <br /> a Reservation</h1>
           <p className="font-lato text-xl">Get in touch with restaurant</p>
         </div>
         <div className="flex flex-col gap-[30px]">
@@ -116,8 +116,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div>
-          <button></button>
+        <div className="flex justify-center items-center mx-auto px-[30px] py-[15px] bg-[#5E6600]">
+          <button>Book Now</button>
         </div>
       </div>         
       {/*fifth section*/}
