@@ -11,7 +11,7 @@ import chef from './chef.png'
 import blog1 from './Feature Image.jpg'
 import blog2 from './Feature Image (1).jpg'
 import starters from './starters.jpg'
-import mains from './mains.png'
+
 import soups from './soups.png'
 import menucover from './menu-cover.jpg'
 import menu1 from './menu1.jpg'
@@ -20,6 +20,11 @@ import contactcover from './contact-cover.jpg'
 import mangoglasses from './mango-glasses.jpg'
 import nicehouse from './nicehouse.jpg'
 import portfolio from './portfolio.png'
+import portfolio1 from './portfolio1.jpg'
+import portfolio2 from './portfolio2.png'
+import portfolio3 from './portfolio3.jpg'
+import portfolio4 from './portfolio4.png'
+import portfolio6 from './portfolio6.png'
 
 const assets = {
   logo,
@@ -35,7 +40,6 @@ const assets = {
   blog1,
   blog2,
   starters,
-  mains,
   soups,
   menucover,
   menu1,
@@ -43,7 +47,12 @@ const assets = {
   contactcover,
   mangoglasses,
   nicehouse,
-  portfolio
+  portfolio,
+  portfolio1,
+  portfolio2,
+  portfolio3,
+  portfolio4,
+  portfolio6
 
 }
 

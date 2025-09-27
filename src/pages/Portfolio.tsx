@@ -1,6 +1,7 @@
 
 import assets from '../assets/assets'
 import Navbar from '../components/Navbar'
+import PortfolioCard from '../components/PortfolioCard'
 
 
 const types: string[] = ['All', 'starters', 'lunch', 'dinner', 'drinks', 'sweets', 'fruits']
@@ -33,7 +34,7 @@ const Portfolio = () => {
             }
           </div>
           <div>
-            <div></div>
+            <div><PortfolioCard /></div>
             <div></div>
             <div></div>
           </div>
