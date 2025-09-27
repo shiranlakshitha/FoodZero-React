@@ -33,8 +33,11 @@ const Portfolio = () => {
               ))
             }
           </div>
-          <div>
-            <div><PortfolioCard /></div>
+          <div className='mt-[50px]'>
+            <div className='flex gap-5 items-stretch'>
+              <div className='flex-3'><PortfolioCard /></div>
+              <div className='flex-1'><PortfolioCard /></div>
+            </div>
             <div></div>
             <div></div>
           </div>
