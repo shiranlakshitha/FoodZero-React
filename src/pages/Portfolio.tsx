@@ -6,6 +6,11 @@ import PortfolioCard from '../components/PortfolioCard'
 
 const types: string[] = ['All', 'starters', 'lunch', 'dinner', 'drinks', 'sweets', 'fruits']
 
+const items: {name: string, meal: string, type: string, image: string}[] =[
+  {name: 'Premium Deep sea Snow White Cod Fillet', meal: 'Lunch' ,type: 'Dinner', image: assets.portfolio1},
+
+]
+
 const Portfolio = () => {
 
 
@@ -35,11 +40,17 @@ const Portfolio = () => {
           </div>
           <div className='mt-[50px]'>
             <div className='flex gap-5 items-stretch'>
-              <div className='flex-3'><PortfolioCard /></div>
-              <div className='flex-1'><PortfolioCard /></div>
+              <div className='flex-3'><PortfolioCard item={items[0]} /></div>
+              <div className='flex-1'><PortfolioCard  item={items[0]}/></div>
             </div>
-            <div></div>
-            <div></div>
+            <div className='flex gap-5 mt-5 items-stretch'>
+              <div className='flex-1'><PortfolioCard item={items[0]}/></div>
+              <div className='flex-3'><PortfolioCard item={items[0]}/></div>
+            </div>
+            <div className='flex gap-5 mt-5 items-stretch'>
+              <div className='flex-1'><PortfolioCard item={items[0]}/></div>
+              <div className='flex-1'><PortfolioCard item={items[0]}/></div>
+            </div>
           </div>
       </div> 
     </>
