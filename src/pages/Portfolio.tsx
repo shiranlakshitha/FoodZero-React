@@ -1,5 +1,6 @@
 
 import assets from '../assets/assets'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import PortfolioCard from '../components/PortfolioCard'
 
@@ -8,6 +9,11 @@ const types: string[] = ['All', 'starters', 'lunch', 'dinner', 'drinks', 'sweets
 
 const items: {name: string, meal: string, type: string, image: string}[] =[
   {name: 'Premium Deep sea Snow White Cod Fillet', meal: 'Lunch' ,type: 'Dinner', image: assets.portfolio1},
+  {name: 'Option Of Natural Vine Available', meal: 'Drinks', type: 'Fruits', image: assets.portfolio2},
+  {name: 'Pumking Soup With Cream', meal: 'Starters', type: 'Sweets', image: assets.portfolio3},
+  {name: 'Strip Steak With Rosemary Butter', meal: 'Dinner', type: 'Lunch', image: assets.portfolio4},
+  {name: 'Braised Sliced Abalone Fish Maw With Premium Sea Food', meal: 'Dinner', type: 'Seafood', image: assets.portfolio5},
+  {name: 'Pan Fried Live Prawn With Superior Soy Sauce', meal: 'Lunch', type: 'Starters', image: assets.portfolio6}
 
 ]
 
@@ -41,18 +47,20 @@ const Portfolio = () => {
           <div className='mt-[50px]'>
             <div className='flex gap-5 items-stretch'>
               <div className='flex-3'><PortfolioCard item={items[0]} /></div>
-              <div className='flex-1'><PortfolioCard  item={items[0]}/></div>
+              <div className='flex-1'><PortfolioCard  item={items[1]}/></div>
             </div>
             <div className='flex gap-5 mt-5 items-stretch'>
-              <div className='flex-1'><PortfolioCard item={items[0]}/></div>
-              <div className='flex-3'><PortfolioCard item={items[0]}/></div>
+              <div className='flex-1'><PortfolioCard item={items[2]}/></div>
+              <div className='flex-3'><PortfolioCard item={items[5]}/></div>
             </div>
             <div className='flex gap-5 mt-5 items-stretch'>
-              <div className='flex-1'><PortfolioCard item={items[0]}/></div>
-              <div className='flex-1'><PortfolioCard item={items[0]}/></div>
+              <div className='flex-1'><PortfolioCard item={items[4]}/></div>
+              <div className='flex-1'><PortfolioCard item={items[3]}/></div>
             </div>
           </div>
-      </div> 
+      </div>
+      {/*third section*/}
+      <Footer /> 
     </>
   )
 }

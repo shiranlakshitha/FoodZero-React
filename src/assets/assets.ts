@@ -22,8 +22,9 @@ import nicehouse from './nicehouse.jpg'
 import portfolio from './portfolio.png'
 import portfolio1 from './portfolio1.jpg'
 import portfolio2 from './portfolio2.png'
-import portfolio3 from './portfolio3.jpg'
+import portfolio3 from './portfolio3.png'
 import portfolio4 from './portfolio4.png'
+import portfolio5 from './portfolio5.jpg'
 import portfolio6 from './portfolio6.png'
 
 const assets = {
@@ -52,6 +53,7 @@ const assets = {
   portfolio2,
   portfolio3,
   portfolio4,
+  portfolio5,
   portfolio6
 
 }
