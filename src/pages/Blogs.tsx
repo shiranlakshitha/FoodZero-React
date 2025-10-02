@@ -14,8 +14,8 @@ const Blogs = () => {
         <div className="absolute inset-0 z-10">
           <img className="w-full h-full object-cover" src={assets.blogcover} alt="" />
         </div>
-        <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-50">
+        <div className="absolute inset-0 bg-black/50 z-20 pointer-events-none"></div>
+        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
           <h1 className="md:text-8xl text-7xl w-full text-center text-white font-rufina">Blogs</h1>
           <p className="text-white font-lato text-center w-full mt-[25px]">It is easy way to create your beatiful blog for daily</p>
         </div>

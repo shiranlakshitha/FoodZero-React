@@ -82,7 +82,7 @@ const Menu = () => {
           <img className="w-full h-full object-cover" src={assets.menucover} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-50">
+        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
           <h1 className="md:text-8xl text-7xl w-full md:max-w-[400px] text-white font-rufina">View our new menu</h1>
           <p className="mt-[15px] text-2xl text-white font-lato">The freshest ingredients for you every day</p>
         </div>

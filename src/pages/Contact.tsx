@@ -34,7 +34,7 @@ const Contact = () => {
           <img className="w-full h-full object-cover" src={assets.contactcover} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="md:px-[100px] px-[25px] flex flex-col md:flex-row  h-full relative  z-50">
+        <div className="md:px-[100px] px-[25px] flex flex-col md:flex-row  h-full relative z-40 pointer-events-none">
           <div className="flex flex-col flex-1 max-md:mt-[100px] h-full items-start justify-center">
             <h1 className="md:text-8xl text-7xl w-full md:max-w-[600px] text-white font-rufina">Get in touch</h1>
             <p className="mt-[15px] text-2xl text-white font-lato">The freshest ingredients for you every day</p>

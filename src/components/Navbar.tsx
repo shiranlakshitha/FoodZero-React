@@ -6,21 +6,25 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navigate = useNavigate()
 
   const menuItems = [
-    "Home",
-    "Menu",
-    "Blog",
-    "About",
-    "Contact"
+    {name:"Home", action: () => navigate("/")},
+    {name:"Menu", action: () => navigate("/menu")},
+    {name:"Blog", action: () => navigate("/blogs")},
+    {name:"Contact", action: () => navigate("/contact")}
   ]
 
   const handleMenu = (): void => {
     setIsOpen(!isOpen);
   };
+
+  if(isOpen) document.body.style.overflow = 'hidden';
+  if(!isOpen) document.body.style.overflow = 'auto';
   return (
     <>
       {!isOpen && (
@@ -60,7 +64,9 @@ const Navbar = () => {
           <div className="relative z-50">
             <ul className="text-3xl md:text-5xl lg:text-7xl text-white max-w-[300px] flex flex-col  gap-6 md:ml-[250px] py-[150px]">
               {menuItems.map((item, index) => (
-                <li className="cursor-pointer" key={index}>{item}</li>
+                <li className="cursor-pointer" key={index} onClick={item.action}>
+                  {item.name}
+                </li>
               ))}
             </ul>
           </div>

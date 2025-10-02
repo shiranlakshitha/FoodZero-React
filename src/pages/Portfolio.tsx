@@ -31,7 +31,7 @@ const Portfolio = () => {
           <img className="w-full h-full object-cover" src={assets.portfolio} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-50">
+        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
           <h1 className="md:text-8xl text-7xl w-full text-center text-white font-rufina">Portfolio</h1>
         </div>
       </div>
