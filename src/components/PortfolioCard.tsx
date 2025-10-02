@@ -1,4 +1,4 @@
-
+import { FaArrowRight } from "react-icons/fa";
 
 const PortfolioCard = ({ item }: { item: { name: string; meal: string; type: string; image: string } }) => {
   return (
@@ -6,15 +6,15 @@ const PortfolioCard = ({ item }: { item: { name: string; meal: string; type: str
       <div className="w-full h-full">
         <img className="w-full h-full object-cover" src={item.image} alt="" />
       </div>
-      <div className="absolute bottom-5 w-full px-[25px] flex flex-row justify-between items-center">
+      <div className="absolute bottom-5 w-full px-[25px] flex flex-row justify-between gap-5 items-center">
         <div className="flex flex-col gap-4">
-          <h3>{item.name}</h3>
-          <div>
+          <h3 className="font-rufina text-xl">{item.name}</h3>
+          <div className="flex flex-row gap-5 font-lato text-[12px]">
             <p>{item.meal}</p>
-            <p>{item.type}</p>
+            <p>&#x2022;{item.type}</p>
           </div>
         </div>
-        <div>arrow</div>
+        <div><FaArrowRight /></div>
       </div>
     </div>
   )

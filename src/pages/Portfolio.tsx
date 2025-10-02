@@ -37,7 +37,7 @@ const Portfolio = () => {
       </div>
       {/*second section*/}
       <div className='px-[50px] py-[100px]'>
-          <div className='flex flex-row gap-10 justify-center items-center mx-auto'>
+          <div className='flex flex-row flex-wrap gap-10 justify-center items-center mx-auto'>
             {
               types.map((item, index) => (
                 <p className='font-lato' key={index}>{item}</p>
@@ -45,17 +45,17 @@ const Portfolio = () => {
             }
           </div>
           <div className='mt-[50px]'>
-            <div className='flex gap-5 items-stretch'>
-              <div className='flex-3'><PortfolioCard item={items[0]} /></div>
-              <div className='flex-1'><PortfolioCard  item={items[1]}/></div>
+            <div className='flex max-md:flex-wrap gap-5 items-stretch'>
+              <div className='md:flex-3 max-md:h-[300px]'><PortfolioCard item={items[0]} /></div>
+              <div className='flex-1 max-md:h-[300px]'><PortfolioCard  item={items[1]}/></div>
             </div>
-            <div className='flex gap-5 mt-5 items-stretch'>
-              <div className='flex-1'><PortfolioCard item={items[2]}/></div>
-              <div className='flex-3'><PortfolioCard item={items[5]}/></div>
+            <div className='flex max-md:flex-wrap gap-5 mt-5 justify-center items-stretch'>
+              <div className='flex-1 max-md:h-[300px]'><PortfolioCard item={items[2]}/></div>
+              <div className='md:flex-3 max-md:h-[300px]'><PortfolioCard item={items[5]}/></div>
             </div>
-            <div className='flex gap-5 mt-5 items-stretch'>
-              <div className='flex-1'><PortfolioCard item={items[4]}/></div>
-              <div className='flex-1'><PortfolioCard item={items[3]}/></div>
+            <div className='flex max-md:flex-wrap gap-5 mt-5 items-stretch'>
+              <div className='md:flex-1 max-md:h-[300px]'><PortfolioCard item={items[4]}/></div>
+              <div className='md:flex-1 max-md:h-[300px]'><PortfolioCard item={items[3]}/></div>
             </div>
           </div>
       </div>
