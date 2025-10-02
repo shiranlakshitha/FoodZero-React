@@ -11,7 +11,7 @@ import chef from './chef.png'
 import blog1 from './Feature Image.jpg'
 import blog2 from './Feature Image (1).jpg'
 import starters from './starters.jpg'
-
+import mains from './mains.png'
 import soups from './soups.png'
 import menucover from './menu-cover.jpg'
 import menu1 from './menu1.jpg'
@@ -64,7 +64,8 @@ const assets = {
   blog3,
   blog4,
   blog5,
-  blog6
+  blog6,
+  mains
 
 }
 
