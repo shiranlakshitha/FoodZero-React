@@ -26,6 +26,11 @@ import portfolio3 from './portfolio3.png'
 import portfolio4 from './portfolio4.png'
 import portfolio5 from './portfolio5.jpg'
 import portfolio6 from './portfolio6.png'
+import blogcover from './blog-cover.png'
+import blog3 from './blog3.png'
+import blog4 from './blog4.jpg'
+import blog5 from './blog5.jpg'
+import blog6 from './blog6.jpg'
 
 const assets = {
   logo,
@@ -54,7 +59,12 @@ const assets = {
   portfolio3,
   portfolio4,
   portfolio5,
-  portfolio6
+  portfolio6,
+  blogcover,
+  blog3,
+  blog4,
+  blog5,
+  blog6
 
 }
 

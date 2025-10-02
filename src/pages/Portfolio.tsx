@@ -37,10 +37,10 @@ const Portfolio = () => {
       </div>
       {/*second section*/}
       <div className='px-[50px] py-[100px]'>
-          <div className='flex flex-row flex-wrap gap-10 justify-center items-center mx-auto'>
+          <div className='flex flex-row flex-wrap gap-10 md:gap-[60px] justify-center items-center mx-auto'>
             {
               types.map((item, index) => (
-                <p className='font-lato' key={index}>{item}</p>
+                <p className='font-lato md:text-3xl text-xl cursor-pointer' key={index}>{item}</p>
               ))
             }
           </div>
