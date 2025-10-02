@@ -21,7 +21,7 @@ const Blogs = () => {
         </div>
       </div>
       {/*second section*/}
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-[70px] justify-items-center py-[50px]">
+      <div className="grid md:px-[50px] px-[25px] md:grid-cols-2 grid-cols-1 gap-[70px] justify-items-center py-[50px]">
         {blogs.map((item, index) => (
         <BlogCard
             key={index}
