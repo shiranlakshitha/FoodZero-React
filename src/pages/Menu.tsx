@@ -2,6 +2,7 @@ import assets from "../assets/assets"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import Reservations from "../components/Reservations"
+import {motion} from 'framer-motion'
 
 interface menus {
   id: number,
@@ -82,28 +83,46 @@ const Menu = () => {
           <img className="w-full h-full object-cover" src={assets.menucover} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+
+        className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
           <h1 className="md:text-8xl text-7xl w-full md:max-w-[400px] text-white font-rufina">View our new menu</h1>
           <p className="mt-[15px] text-2xl text-white font-lato">The freshest ingredients for you every day</p>
-        </div>
+        </motion.div>
       </div>
       {/*second section*/}
       <div className="px-[50px] py-[100px]">
-        <div className="text-center">
+        <motion.div
+           initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          className="text-center">
           <h1 className="font-rufina text-7xl font-bold">Starters</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
-        </div>
+        </motion.div>
         <div className="mt-[50px] flex flex-col md:flex-row  items-center justify-between gap-[50px]">
-          <div className="max-w-[500px] flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu1} alt="" />
-          </div>
+          </motion.div>
           <div className="flex-col flex-1 max-w-[600px]">
             {menus[0].data.map((item) => (
-              <div key={item.id}>
+              <motion.div
+                key={item.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: item.id * 0.2 }}
+              >
                 <p className="font-rufina text-3xl flex justify-end border-b-1 border-dotted">{item.price}</p>
                 <h1 className="max-w-[400px] font-rufina text-5xl mt-[15px]">{item.name}</h1>
                 <p className="mt-[25px]">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
             
 
@@ -112,21 +131,35 @@ const Menu = () => {
       </div>
       {/*third section*/}
       <div className="px-[50px] py-[100px]">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
           <h1 className="font-rufina text-7xl font-bold">Mains</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
-        </div>
+        </motion.div>
         <div className="mt-[50px] flex flex-col md:flex-row-reverse items-center justify-between gap-[50px]">
-          <div className="max-w-[500px] flex-1">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu2} alt="" />
-          </div>
+          </motion.div>
           <div className="flex-col flex-1 max-w-[600px]">
             {menus[1].data.map((item) => (
-              <div key={item.id}>
+              <motion.div
+                key={item.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: item.id * 0.2 }}
+              >
                 <p className="font-rufina text-3xl flex justify-end border-b-1 border-dotted">{item.price}</p>
                 <h1 className="max-w-[400px] font-rufina text-5xl mt-[15px]">{item.name}</h1>
                 <p className="mt-[25px]">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
             
 
@@ -135,29 +168,48 @@ const Menu = () => {
       </div>
       {/*fourth section*/}
       <div className="px-[50px] py-[100px]">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        className="text-center">
           <h1 className="font-rufina text-7xl font-bold">Pastries & Drinks</h1>
           <p className="font-lato">This is a section of your menu. Give your section a brief description</p>
-        </div>
+        </motion.div>
         <div className="mt-[50px] flex flex-col md:flex-row items-center justify-between gap-[50px]">
-          <div className="max-w-[500px] flex-1">
+          <motion.div
+          initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          className="max-w-[500px] flex-1">
             <img className="flex w-full h-full object-cover" src={assets.menu2} alt="" />
-          </div>
+          </motion.div>
           <div className="flex-col flex-1 max-w-[600px]">
             {menus[1].data.map((item) => (
-              <div key={item.id}>
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: item.id * 0.2 }}
+              >
                 <p className="font-rufina text-3xl flex justify-end border-b-1 border-dotted">{item.price}</p>
                 <h1 className="max-w-[400px] font-rufina text-5xl mt-[15px]">{item.name}</h1>
                 <p className="mt-[25px]">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
             
 
           </div>
         </div>
       </div>
-      <Reservations />
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <Reservations />
+        </motion.div>
+        <Footer />
+      
     </>
   )
 }
