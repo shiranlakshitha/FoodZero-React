@@ -16,7 +16,8 @@ const Navbar = () => {
     {name:"Home", action: () => navigate("/")},
     {name:"Menu", action: () => navigate("/menu")},
     {name:"Blog", action: () => navigate("/blogs")},
-    {name:"Contact", action: () => navigate("/contact")}
+    {name:"Contact", action: () => navigate("/contact")},
+    {name:"Portfolio", action: () => navigate("/portfolio")}
   ]
 
   const handleMenu = (): void => {

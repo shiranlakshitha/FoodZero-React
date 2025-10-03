@@ -40,7 +40,7 @@ const Portfolio = () => {
           <div className='flex flex-row flex-wrap gap-10 md:gap-[60px] justify-center items-center mx-auto'>
             {
               types.map((item, index) => (
-                <p className='font-lato md:text-3xl text-xl cursor-pointer' key={index}>{item}</p>
+                <p className='font-lato md:text-2xl text-xl cursor-pointer' key={index}>{item}</p>
               ))
             }
           </div>
