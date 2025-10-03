@@ -3,6 +3,7 @@ import assets from '../assets/assets'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import PortfolioCard from '../components/PortfolioCard'
+import {motion} from 'framer-motion'
 
 
 const types: string[] = ['All', 'starters', 'lunch', 'dinner', 'drinks', 'sweets', 'fruits']
@@ -31,32 +32,55 @@ const Portfolio = () => {
           <img className="w-full h-full object-cover" src={assets.portfolio} alt="" />
         </div>
         <div className="absolute inset-0 z-20 bg-black/50 "></div>
-        <div className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="md:px-[100px] px-[25px]  relative flex flex-col h-full items-start justify-center z-40 pointer-events-none">
           <h1 className="md:text-8xl text-7xl w-full text-center text-white font-rufina">Portfolio</h1>
-        </div>
+        </motion.div>
       </div>
       {/*second section*/}
       <div className='px-[50px] py-[100px]'>
           <div className='flex flex-row flex-wrap gap-10 md:gap-[60px] justify-center items-center mx-auto'>
             {
               types.map((item, index) => (
-                <p className='font-lato md:text-2xl text-xl cursor-pointer' key={index}>{item}</p>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                >
+                  <p className='font-lato md:text-2xl text-xl cursor-pointer'>{item}</p>
+                </motion.div>
               ))
             }
           </div>
           <div className='mt-[50px]'>
-            <div className='flex max-md:flex-wrap gap-5 items-stretch'>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            className='flex max-md:flex-wrap gap-5 items-stretch'>
               <div className='md:flex-3 max-md:h-[300px]'><PortfolioCard item={items[0]} /></div>
               <div className='flex-1 max-md:h-[300px]'><PortfolioCard  item={items[1]}/></div>
-            </div>
-            <div className='flex max-md:flex-wrap gap-5 mt-5 justify-center items-stretch'>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className='flex max-md:flex-wrap gap-5 mt-5 justify-center items-stretch'>
               <div className='flex-1 max-md:h-[300px]'><PortfolioCard item={items[2]}/></div>
               <div className='md:flex-3 max-md:h-[300px]'><PortfolioCard item={items[5]}/></div>
-            </div>
-            <div className='flex max-md:flex-wrap gap-5 mt-5 items-stretch'>
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            className='flex max-md:flex-wrap gap-5 mt-5 items-stretch'>
               <div className='md:flex-1 max-md:h-[300px]'><PortfolioCard item={items[4]}/></div>
               <div className='md:flex-1 max-md:h-[300px]'><PortfolioCard item={items[3]}/></div>
-            </div>
+            </motion.div>
           </div>
       </div>
       {/*third section*/}
