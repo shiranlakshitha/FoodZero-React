@@ -2,9 +2,9 @@ import { FaArrowRight } from "react-icons/fa";
 
 const PortfolioCard = ({ item }: { item: { name: string; meal: string; type: string; image: string } }) => {
   return (
-    <div className="w-full text-white max-h-[600px] h-full overflow-hidden relative">
+    <div className="w-full text-white max-h-[600px] h-full overflow-hidden relative group hover: transition-all duration-300 cursor-pointer">
       <div className="w-full h-full">
-        <img className="w-full h-full object-cover" src={item.image} alt="" />
+        <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src={item.image} alt="" />
       </div>
 
       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent z-10 pointer-events-none" />
